@@ -50,18 +50,36 @@
           </button>
           <button class="amount" id="button2" value="25">RM 25.00</button>
           <button class="amount" id="button3" value="50">RM 50.00</button>
-          <input
-            class="amount-textfield"
-            placeholder="Enter donation amount"
-            id="txtvalue"
-            name="quantity"
-            min="10"
-            step="10"
-            value="10"
-            type="number"
-          />
         </div>
-        <input class="box" type="text" name="name" placeholder="Name" />
+        <input
+          class="amount-textfield"
+          placeholder="Enter donation amount"
+          id="txtvalue"
+          name="quantity"
+          min="10"
+          step="10"
+          value="10"
+          type="number"
+        />
+        <form id="form">
+          <div class="form-control">
+            <input type="text" placeholder="Name" id="username" required />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <input id="email" type="email" placeholder="Email" required />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <input
+              id="number"
+              type="number"
+              placeholder="Contact Number"
+              required
+            />
+            <small>Error message</small>
+          </div>
+        </form>
         <textarea
           class="remark-box"
           rows="4"
@@ -71,7 +89,9 @@
       </div>
       &nbsp;
     </div>
-    <button class="check-out-button">Go to Checkout</button>
+    <button onclick="onSubmit()" class="check-out-button">
+      Checkout
+    </button>
     <script src="main.js"></script>
   </body>
 </html>
